@@ -80,3 +80,25 @@ interface MathFunc {
 }
 
 const add: MathFunc = (x: number, y: number): number => x + y;
+const sub: MathFunc = (x: number, y: number): number => x - y;
+
+// Classes
+class Person {
+    id: number
+    name: string
+
+    constructor(id: number, name: string) {
+        this.id = id;
+        this.name = name;
+    }
+
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+
+const john = new Person(1, "john");
+// console.log(john.id);
+console.log(john.register());
+
+

@@ -55,3 +55,17 @@ const user1 = {
     name: "John"
 };
 const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
+// Classes
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+const john = new Person(1, "john");
+// console.log(john.id);
+console.log(john.register());
