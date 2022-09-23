@@ -43,4 +43,15 @@ const user = {
 let cid = "1";
 // let customerID = <number>cid
 let customerID = cid;
-console.log(customerID);
+// Functions
+function addNum(x, y) {
+    return x + y;
+}
+function log(message) {
+    console.log(message);
+}
+const user1 = {
+    id: 1,
+    name: "John"
+};
+const add = (x, y) => x + y;
