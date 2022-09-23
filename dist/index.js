@@ -56,7 +56,6 @@ const user1 = {
 };
 const add = (x, y) => x + y;
 const sub = (x, y) => x - y;
-// Classes
 class Person {
     constructor(id, name) {
         this.id = id;
@@ -66,6 +65,18 @@ class Person {
         return `${this.name} is now registered`;
     }
 }
-const john = new Person(1, "john");
-// console.log(john.id);
-console.log(john.register());
+// Subclass
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(32, "James", "Senior Dev");
+// Generics - basically a parameter for the type 
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(["John", "Jill", "Jane"]);
+strArray.push('hello');
